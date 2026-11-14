@@ -42,7 +42,7 @@
             require-prior-idle-ms = <125>;
         };
     };
-/ {
+
     behaviors {
         ht_snip: hold_tap_snip {
             compatible = "zmk,behavior-hold-tap";
