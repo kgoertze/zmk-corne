@@ -42,6 +42,16 @@
             require-prior-idle-ms = <125>;
         };
     };
+/ {
+    behaviors {
+        ht_snip: hold_tap_snip {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&kp>, <&kp>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -49,7 +59,7 @@
         mac_layer {  // MAC 0
             bindings = <
 &kp DEL        &mt EXCL Q  &mt AT W  &mt HASH E     &mt DLLR R    &mt PRCNT T        &mt MINUS Y    &mt AMPS U    &mt STAR I      &mt LPAR O    &mt RPAR P     &kp BSPC
-&mt LCTRL ESC  &kp A  &mt LGUI(LSHIFT(S)) S  &kp D     &kp F    &kp G        &kp H    &kp J    &kp K      &kp L    &kp SEMI  &mt RCTRL SQT
+&mt LCTRL ESC  &kp A  &ht_snip LG(LS(S)) S  &kp D     &kp F    &kp G        &kp H    &kp J    &kp K      &kp L    &kp SEMI  &mt RCTRL SQT
 &mt LSHIFT CAPS      &mt LCTRL(Z) Z  &mt LCTRL(X) X  &mt LCTRL(C) C     &mt LCTRL(V) V    &kp B        &kp N    &kp M    &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT 
                              &kp LGUI  &kp RET  &to NUM    &mo NUM  &mo SPACE  &kp LALT
             >;
@@ -58,7 +68,7 @@
          windows_layer {  // WIN 1
             bindings = <
 &kp DEL        &mt EXCL Q  &mt AT W  &mt HASH E     &mt DLLR R    &mt PRCNT T        &mt MINUS Y    &mt AMPS U    &mt STAR I      &mt LPAR O    &mt RPAR P     &kp BSPC
-&mt LCTRL ESC  &kp A  &mt LGUI(LSHIFT(S)) S  &kp D     &kp F    &kp G        &kp H    &kp J    &kp K      &kp L    &kp SEMI  &mt RCTRL SQT
+&mt LCTRL ESC  &kp A  &ht_snip LG(LS(S)) S  &kp D     &kp F    &kp G        &kp H    &kp J    &kp K      &kp L    &kp SEMI  &mt RCTRL SQT
 &mt LSHIFT CAPS      &mt LCTRL(Z) Z  &mt LCTRL(X) X  &mt LCTRL(C) C     &mt LCTRL(V) V    &kp B        &kp N    &kp M    &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT 
                              &kp LGUI  &kp RET  &to NUM    &mo NUM  &mo SPACE  &kp LALT
             >;
