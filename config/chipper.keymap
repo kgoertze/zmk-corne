@@ -43,6 +43,14 @@
     };
 
     behaviors {
+        my_hold_tap: my_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <400>;
+            bindings = <&kp>, <&kp>;
+        };
+
         ht_snip: hold_tap_snip {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
