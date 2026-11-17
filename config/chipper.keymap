@@ -94,7 +94,7 @@
         number_layer {  // NUM 2
             bindings = <
 &kp DEL	&kp CARET	&kp GRAVE	&kp LBKT	&kp RBKT	&kp BACKSLASH	&kp N7	&kp N8	&kp N9	&kp MINUS	&kp BACKSLASH	&kp BSPC
-&kp TAB	&none	&none	&none	&kp up	&none	   &kp N4	 &kp N5	 &kp N6	&kp PLUS	  &kp STAR	&mt RCTRL SQT
+&kp TAB	&none	&none	&none	&kp UP	&none	   &kp N4	 &kp N5	 &kp N6	&kp PLUS	  &kp STAR	&mt RCTRL SQT
 &mt LSHIFT CAPS	&none	&none	&kp LEFT	&kp DOWN	&kp RIGHT	&kp N1	&kp N2 	 &kp N3	&kp EQUAL	&none	 &kp RSHFT
 			&trans 	&trans 	 &to WIN	 &mo WIN	     &kp DOT	  &kp N0			
             >;
